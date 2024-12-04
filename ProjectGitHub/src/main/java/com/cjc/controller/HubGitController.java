@@ -22,7 +22,9 @@ public class HubGitController
 	@GetMapping("/HuBGitDataSave")
 	public ResponseEntity<List<HubGit>> ongetData()
 	{
+		
 		LOG.info(" this is getMethod");
+		LOG.info("this is Dataget");
 		List<HubGit> list=serviceI.saveData();
 		return new ResponseEntity<List<HubGit>>(list,HttpStatus.CREATED);
 	}
