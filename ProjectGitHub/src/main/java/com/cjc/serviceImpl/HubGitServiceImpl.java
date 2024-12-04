@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cjc.controller.HubGitController;
+import com.cjc.model.HubGit;
 import com.cjc.repository.HubGitRepository;
 import com.cjc.serviceI.HubGitServiceI;
 
@@ -14,6 +15,14 @@ public class HubGitServiceImpl implements HubGitServiceI
 {
 	private static final Logger LOG=LoggerFactory.getLogger(HubGitController.class);
 	@Autowired HubGitRepository repository ;
+	
+	@Override
+	public void saveData(HubGit h) 
+	{
+		// TODO Auto-generated method stub
+		repository.save(h);
+		
+	}
 	
 	
 
