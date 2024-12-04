@@ -24,6 +24,12 @@ public class HubGitServiceImpl implements HubGitServiceI
 		return (List<HubGit>) repository.findAll();
 	}
 	
+	@Override
+	public void saveData(HubGit h) 
+	{
+		repository.save(h);
+	}
+	
 	
 
 }
